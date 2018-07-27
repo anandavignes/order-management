@@ -7,6 +7,8 @@ High Level Uses cases:
 
 GitHub: git@github.com:anandavignes/order-management.git
 
+Postman Collection: https://www.getpostman.com/collections/fd27c682f92188f81193
+
 	To run locally -> Right click, then run as Spring Boot App
 
 	To navigate the code, Controller (Order and Payment) -> Service -> Repository -> Database.
