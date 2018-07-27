@@ -8,9 +8,13 @@ High Level Uses cases:
 GitHub: git@github.com:anandavignes/order-management.git
 
 	To run locally -> Right click, then run as Spring Boot App
+
 	To navigate the code, Controller (Order and Payment) -> Service -> Repository -> Database.
+
 	This application uses H2 in-memory database for persistence (#scope - runtime). 
+
 	Unit and Integration Test cases exists under test folder.
+
 Note: Spring security configuration is commented for local development testing scenarios
 
 Next steps:
