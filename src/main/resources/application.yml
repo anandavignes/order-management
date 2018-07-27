@@ -1,0 +1,57 @@
+server:
+  port: 8080
+  server-header: ally-order-mgt
+  tomcat:
+    max-threads: 300
+    accept-count: 200
+    min-spare-threads: 50
+    max-connections: 300
+
+error:
+  map:
+    4001:
+      statusCode: 400
+      message: Missing required parameter or input parameter name is not supported by the API 
+      subStatusCode: A400_1
+
+    4002:
+      statusCode: 404
+      message: Order does not exists, please check the order number 
+      subStatusCode: A400_2
+
+    4003:
+      statusCode: 400
+      message: Given payment amount is greater than total due amount 
+      subStatusCode: A400_3
+
+    4004:
+      statusCode: 400
+      message: Given payment amount is greater than total due amount
+      subStatusCode: A400_4
+
+    4005:
+      statusCode: 400
+      message: No products found in the order request, minimum one required
+      subStatusCode: A400_5
+
+    4006:
+      statusCode: 400
+      message: No orders found in the system yet, please submit a new order
+      subStatusCode: A400_6
+
+    403:
+      statusCode: 401
+      subStatusCode: C401_4
+      message: Authorization failed
+      
+    500:
+      statusCode: 500
+      subStatusCode: A500_1
+      message: Internal Server Error
+
+
+connection_pool:
+  read_timeout: 60000
+  connection_timeout: 60000
+  max_connections: 50
+  max_connections_per_route: 50
